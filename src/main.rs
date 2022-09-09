@@ -4,14 +4,14 @@ use std::io::{self, Write};
 
 // Dev note: Use process::exit() to exit from the current process
 // use std::process;
-
 // Display the byte array representation from the vector content
+
 fn display_bytes(bytes: &Vec<u8>) {
     print!("Bytes array: ");
     for (_, byte) in bytes.iter().enumerate() {
         print!("\\{:#02x}", byte);
     }
-    println!("");
+    println!();
 }
 
 fn display_sha2(bytes: &Vec<u8>) {
@@ -22,15 +22,15 @@ fn display_sha2(bytes: &Vec<u8>) {
     for value in digest {
         print!("{:x}", value);
     }
-    println!("");
+    println!();
 }
 
-fn display_hexa(bytes: &Vec<u8>) {
-    print!("Hexa array: ");
+fn display_hex(bytes: &Vec<u8>) {
+    print!("Hex array: ");
     for (_, byte) in bytes.iter().enumerate() {
         print!("{:#02x}", byte);
     }
-    println!("");
+    println!();
 }
 
 fn display_octal(bytes: &Vec<u8>) {
@@ -38,7 +38,7 @@ fn display_octal(bytes: &Vec<u8>) {
     for (_, byte) in bytes.iter().enumerate() {
         print!("{:#o}", byte);
     }
-    println!("");
+    println!();
 }
 
 // Display a C array from an input vector
@@ -114,7 +114,7 @@ fn display_info(content_string: &mut String) {
     display_string(&raw_string);
     display_check(&raw_string);
     display_bytes(&bytes_array);
-    display_hexa(&bytes_array);
+    display_hex(&bytes_array);
     display_octal(&bytes_array);
     display_sha2(&bytes_array);
     display_c_array(&bytes_array);
@@ -131,8 +131,8 @@ fn main() -> io::Result<()> {
 
     loop {
         print!("sblade> ");
-        std::io::stdout().flush().unwrap();
-        std::io::stdin()
+        io::stdout().flush().unwrap();
+        io::stdin()
             .read_line(&mut sblade_command)
             .expect("Couldn't read from standard input");
 

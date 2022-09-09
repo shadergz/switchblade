@@ -1,6 +1,7 @@
 # sblade
 
-sblade or switchblade it's a multitool in one capable of doing simple analysis with any type of data, attempting to speed up ethical hacking activities
+sblade or switchblade it's a multi-tool in one capable of doing simple analysis with any 
+type of data, attempting to speed up ethical hacking activities
 
 > This is my first program in Rust 👶
 
@@ -8,7 +9,7 @@ sblade or switchblade it's a multitool in one capable of doing simple analysis w
 
 - UTF-8
 - Bytes Array
-- Hexa and Octal
+- Hex and Octal
 - C Array
 - SHA256 digest
 - Integer
@@ -16,16 +17,16 @@ sblade or switchblade it's a multitool in one capable of doing simple analysis w
 - LOG10
 - Scientific notation
 - IPv4
-- RGB Hexa + Decimal
+- RGB Hex + Decimal
 
-## How to buid
+## How to build
 
 ```bash
-cargo build
+sblade> cargo build
 ```
 
 ## How to run (interactive way)
 
 ```bash
-cargo run
+sblade> cargo run
 ```
