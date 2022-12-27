@@ -44,7 +44,7 @@ fn display_octal(bytes: &Vec<u8>) {
 // Display a C array from an input vector
 fn display_c_array(bytes: &Vec<u8>) {
     let array_len = bytes.len();
-    print!("C Array: unsigned char c_array = {{");
+    print!("C array: static const unsigned char C_ARRAY = {{");
     for (pos, byte) in bytes.iter().enumerate() {
         if pos + 1 < array_len {
             print!("{:#02x}, ", byte);
@@ -127,23 +127,23 @@ fn display_info(content_string: &mut String) {
 }
 
 fn main() -> io::Result<()> {
-    let mut sblade_command = String::new();
+    let mut switchblade_command = String::new();
 
     loop {
-        print!("sblade> ");
+        print!("switchblade> ");
         io::stdout().flush().unwrap();
         io::stdin()
-            .read_line(&mut sblade_command)
+            .read_line(&mut switchblade_command)
             .expect("Couldn't read from standard input");
 
         // Truncate the '\n' character
-        sblade_command.truncate(sblade_command.len() - 1);
+        switchblade_command.truncate(switchblade_command.len() - 1);
 
-        match &sblade_command as &str {
+        match &switchblade_command as &str {
             "exit" | "quit" => break,
             "" => println!("Hey! make this easy"),
             _ => {
-                display_info(&mut sblade_command);
+                display_info(&mut switchblade_command);
             }
         }
 
@@ -151,7 +151,7 @@ fn main() -> io::Result<()> {
             Necessary doesn't nothing more that a truncate into length 0, the string by itself
             isn't deallocated or something else
         */
-        sblade_command.clear();
+        switchblade_command.clear();
     }
 
     Ok(())

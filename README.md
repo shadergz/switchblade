@@ -1,6 +1,6 @@
-# sblade
+# switchblade
 
-sblade or switchblade it's a multi-tool in one capable of doing simple analysis with any 
+**switchblade** it's a multi-tool in one capable of doing simple analysis with any 
 type of data, attempting to speed up ethical hacking activities
 
 > This is my first program in Rust 👶
@@ -22,11 +22,11 @@ type of data, attempting to speed up ethical hacking activities
 ## How to build
 
 ```bash
-sblade> cargo build
+switchblade> cargo build
 ```
 
 ## How to run (interactive way)
 
 ```bash
-sblade> cargo run
+switchblade> cargo run
 ```

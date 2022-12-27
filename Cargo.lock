@@ -63,13 +63,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "06e509672465a0504304aa87f9f176f2b2b716ed8fb105ebe5c02dc6dce96a94"
 
 [[package]]
-name = "sblade"
-version = "0.1.0"
-dependencies = [
- "sha2",
-]
-
-[[package]]
 name = "sha2"
 version = "0.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -78,6 +71,13 @@ dependencies = [
  "cfg-if",
  "cpufeatures",
  "digest",
+]
+
+[[package]]
+name = "switchblade"
+version = "0.1.0"
+dependencies = [
+ "sha2",
 ]
 
 [[package]]
